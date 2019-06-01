@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="192dp"
+    android:background="@color/grey"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        android:text="Kotlin First"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+    <!-- <Button
+         android:id="@+id/btn_find_age"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:textAllCaps="false"
+         android:layout_marginTop="10dp"
+         android:text="Find Your Age" />
+
+     <Button
+         android:id="@+id/btn_tic_tac_toy"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:textAllCaps="false"
+         android:layout_marginTop="10dp"
+         android:text="Tic Tac Toy" />
+     <Button
+         android:id="@+id/btn_calculator"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:textAllCaps="false"
+         android:layout_marginTop="10dp"
+         android:text="Calculator" />
+     <Button
+         android:id="@+id/btn_pockemon"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:textAllCaps="false"
+         android:layout_marginTop="10dp"
+         android:text="Pockemon" />
+     <Button
+         android:id="@+id/btn_zoo_app"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:textAllCaps="false"
+         android:layout_marginTop="10dp"
+         android:text="Zoo App" />-->
+</RelativeLayout>

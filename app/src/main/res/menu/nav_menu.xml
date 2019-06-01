@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/find_age"
+          android:title="Find Your Age"/>
+
+    <item android:id="@+id/tic_tac"
+          android:title="Tic Tac Toy"/>
+
+    <item android:id="@+id/calculator"
+          android:title="Calculator"/>
+
+    <item android:id="@+id/pokemon"
+          android:title="Pockemon"/>
+
+    <item android:id="@+id/zoo"
+          android:title="Zoo App"/>
+
+    <item android:id="@+id/food"
+          android:title="Food Menu"/>
+
+</menu>
