@@ -1,7 +1,7 @@
 package `in`.khatri.rahul.kotlinfirst.adapter
 
 import `in`.khatri.rahul.kotlinfirst.R
-import `in`.khatri.rahul.kotlinfirst.activity.FoodDetailActivity
+import `in`.khatri.rahul.kotlinfirst.activity.RestaurantDetailActivity
 import `in`.khatri.rahul.kotlinfirst.model.Food
 import android.annotation.SuppressLint
 import android.content.Context
@@ -30,7 +30,7 @@ class FoodAdapter : BaseAdapter {
         myView.tv_name.text = food.name!!
         myView.iv_food.setImageResource(food.image!!)
         myView.ll_food.setOnClickListener {
-            context!!.startActivity(Intent(context, FoodDetailActivity::class.java).putExtra("name", food.name!!).putExtra("des", food.des!!).putExtra("image",
+            context!!.startActivity(Intent(context, RestaurantDetailActivity::class.java).putExtra("name", food.name!!).putExtra("des", food.des!!).putExtra("image",
                 food.image!!))
         }
         return myView

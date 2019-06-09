@@ -71,6 +71,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.food -> {
                 startActivity(Intent(this, RestaurantActivity::class.java))
             }
+            R.id.notes -> {
+                startActivity(Intent(this, NotesActivity::class.java))
+            }
 
 
         }

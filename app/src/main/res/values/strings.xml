@@ -2,5 +2,9 @@
     <string name="app_name">KotlinFirst</string>
     <string name="open_drawer">Open Drawer</string>
     <string name="close_drawer">Close Drawer</string>
+    <string name="content">Content We prefer Google, but you may use your favorite search engine. Type your primary
+        keyword in the Google search bar and look at the types of articles that show up in the SERPs. As in Step 1
+        above, you want to see what other people are saying about your topic.
+    </string>
 
 </resources>
