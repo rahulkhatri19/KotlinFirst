@@ -1,6 +1,7 @@
 package `in`.khatri.rahul.kotlinfirst
 
 import `in`.khatri.rahul.kotlinfirst.activity.*
+import `in`.khatri.rahul.kotlinfirst.fragment.CheckAgeFragment
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -24,6 +25,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         toggle!!.syncState()
 
+        if (savedInstanceState == null){
+            supportFragmentManager.beginTransaction().add(R.id.content_frame, CheckAgeFragment()).addToBackStack(null).commit()
+        }
         navigation_view.setNavigationItemSelectedListener(this)
 
 // toggle.isDrawerIndicatorEnabled = true
@@ -49,8 +53,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.find_age -> {
-                startActivity(Intent(this, Test::class.java))
+//                startActivity(Intent(this, Test::class.java))
 //                Toast.makeText(this,"Find Age Selected", Toast.LENGTH_SHORT).show()
+                supportFragmentManager.beginTransaction().add(R.id.content_frame, CheckAgeFragment()).addToBackStack(null).commit()
             }
             R.id.tic_tac -> {
                 startActivity(Intent(this, TicTacToy::class.java))
