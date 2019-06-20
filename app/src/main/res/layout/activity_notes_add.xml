@@ -36,4 +36,12 @@
             app:layout_constraintTop_toBottomOf="@+id/et_title"
             android:ems="10"
             android:id="@+id/et_des"/>
+    <Button
+            android:text="Add note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

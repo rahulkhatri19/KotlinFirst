@@ -39,7 +39,6 @@ class CheckAgeFragment : Fragment() {
                 cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
                 Log.e("year: $year month $month", "day: $dayOfMonth")
-
             }
 
         }
