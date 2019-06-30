@@ -2,6 +2,7 @@ package `in`.khatri.rahul.kotlinfirst.activity
 
 import `in`.khatri.rahul.kotlinfirst.R
 import `in`.khatri.rahul.kotlinfirst.model.Notes
+import `in`.khatri.rahul.kotlinfirst.utility.DatabaseHelperNotes
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -11,6 +12,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_notes.*
 import kotlinx.android.synthetic.main.notes_item.view.*
 
@@ -23,6 +25,16 @@ class NotesActivity : AppCompatActivity() {
 
         fab_add.setOnClickListener {
             startActivity(Intent(this, NotesAddActivity::class.java))
+
+            val dbHandler= DatabaseHelperNotes(this, null)
+            val cursor= dbHandler.getData()
+            cursor!!.moveToFirst()
+            Toast.makeText(this, "Title: "+cursor.getString(cursor.getColumnIndex(DatabaseHelperNotes.colTitle)) +"\nDes: "+cursor.getString(cursor.getColumnIndex(DatabaseHelperNotes.colDes)), Toast.LENGTH_SHORT).show()
+            while (cursor.moveToNext()){
+                Toast.makeText(this, "Title: "+cursor.getString(cursor.getColumnIndex(DatabaseHelperNotes.colTitle)) +"\nDes: "+cursor.getString(cursor.getColumnIndex(DatabaseHelperNotes.colDes)), Toast.LENGTH_SHORT).show()
+            }
+            cursor.close()
+
         }
         notesList.add(
             Notes(

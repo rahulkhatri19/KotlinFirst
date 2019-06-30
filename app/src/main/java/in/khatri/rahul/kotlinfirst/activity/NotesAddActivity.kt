@@ -1,7 +1,7 @@
 package `in`.khatri.rahul.kotlinfirst.activity
 
 import `in`.khatri.rahul.kotlinfirst.R
-import `in`.khatri.rahul.kotlinfirst.utility.DbManager
+import `in`.khatri.rahul.kotlinfirst.utility.DatabaseHelperNotes
 import android.content.ContentValues
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -36,20 +36,10 @@ class NotesAddActivity : AppCompatActivity() {
             R.id.add_note -> {
                 Toast.makeText(this, "Title: " + et_title.text + "\nDescription: " + et_des.text, Toast.LENGTH_LONG)
                     .show()
-                addNotes(et_title.text.toString(), et_des.text.toString())
+                val dbManager = DatabaseHelperNotes(this@NotesAddActivity, null)
+                dbManager.insertData(et_title.text.toString(), et_des.text.toString())
             }
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    private fun addNotes(title: String, des: String) {
-        val dbManager = DbManager(this)
-        var values = ContentValues()
-        values.put("Title", title)
-        values.put("Description", des)
-        val ID = dbManager.Insert(values)
-        if (ID > 0) Toast.makeText(this, "Note is been Inserted", Toast.LENGTH_SHORT).show()
-        else Toast.makeText(this, "Cant't add note", Toast.LENGTH_SHORT).show()
-
     }
 }
