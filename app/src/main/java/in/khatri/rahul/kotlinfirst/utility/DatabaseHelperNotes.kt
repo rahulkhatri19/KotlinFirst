@@ -42,4 +42,29 @@ class DatabaseHelperNotes(context: Context, factory: SQLiteDatabase.CursorFactor
         val db= this.readableDatabase
         return db.rawQuery("SELECT * FROM $dbTableName", null)
     }
+//    fun updateTask(tasks: Tasks): Boolean {
+//    val db = this.writableDatabase
+//    val values = ContentValues()
+//    values.put(NAME, tasks.name)
+//    values.put(DESC, tasks.desc)
+//    values.put(COMPLETED, tasks.completed)
+//    val _success = db.update(TABLE_NAME, values, ID + "=?", arrayOf(tasks.id.toString())).toLong()
+//    db.close()
+//    return Integer.parseInt("$_success") != -1
+//}
+
+    fun updateData( id: Int, title: String, des: String){
+        val db=this.writableDatabase
+
+        val values = ContentValues()
+        values.put(colTitle, title)
+        values.put(colDes, des)
+        db.update(dbTableName, values, colID+"=?", arrayOf(id.toString()))
+        db.close()
+    }
+    fun deleteData(id: Int){
+        val db=this.writableDatabase
+        db.delete(dbTableName, colID+"=?", arrayOf(id.toString()))
+        db.close()
+    }
 }
