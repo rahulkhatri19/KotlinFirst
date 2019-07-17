@@ -2,6 +2,7 @@ package `in`.khatri.rahul.kotlinfirst
 
 import `in`.khatri.rahul.kotlinfirst.activity.*
 import `in`.khatri.rahul.kotlinfirst.fragment.CheckAgeFragment
+import `in`.khatri.rahul.kotlinfirst.fragment.RestaurantFragment
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -55,7 +56,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.find_age -> {
 //                startActivity(Intent(this, Test::class.java))
 //                Toast.makeText(this,"Find Age Selected", Toast.LENGTH_SHORT).show()
-                supportFragmentManager.beginTransaction().add(R.id.content_frame, CheckAgeFragment()).addToBackStack(null).commit()
+                supportFragmentManager.beginTransaction().replace(R.id.content_frame, CheckAgeFragment()).commit()
             }
             R.id.tic_tac -> {
                 startActivity(Intent(this, TicTacToy::class.java))
@@ -74,7 +75,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //                Toast.makeText(this,"Zoo Selected", Toast.LENGTH_SHORT).show()
             }
             R.id.food -> {
-                startActivity(Intent(this, RestaurantActivity::class.java))
+//                startActivity(Intent(this, RestaurantActivity::class.java))
+                supportFragmentManager.beginTransaction().replace(R.id.content_frame, RestaurantFragment()).commit()
             }
             R.id.notes -> {
                 startActivity(Intent(this, NotesActivity::class.java))

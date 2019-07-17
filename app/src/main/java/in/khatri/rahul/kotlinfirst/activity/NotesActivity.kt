@@ -30,31 +30,6 @@ class NotesActivity : AppCompatActivity() {
         fab_add.setOnClickListener {
             startActivity(Intent(this, NotesAddActivity::class.java))
         }
-//        notesList.add(
-//            Notes(
-//                1,
-//                "Written By Me",
-//                "By now, you have a winning strategy for how you will use content to grow your business… an effective idea-generating system in place… and an editorial plan for the content you'll create over the next few months, give or take."
-//            )
-//        )
-//
-//        notesList.add(
-//            Notes(
-//                2,
-//                "Written By Neil Patel",
-//                "Just to be clear: In this chapter, we talk primarily about how to write content. That doesn't mean we think you ought to be creating blog posts only or that written content is somehow better."
-//            )
-//        )
-//
-//        notesList.add(
-//            Notes(
-//                3,
-//                "Written By Kathryn Aragon",
-//                "If you've studied writing, you may recognize this as the writing process. We've renamed it the creative process on purpose."
-//            )
-//        )
-
-//        lv_notes.adapter = NotesAdapter(this, notesList)
     }
 
     private fun getData() {
