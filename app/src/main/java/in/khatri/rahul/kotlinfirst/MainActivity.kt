@@ -3,6 +3,7 @@ package `in`.khatri.rahul.kotlinfirst
 import `in`.khatri.rahul.kotlinfirst.activity.*
 import `in`.khatri.rahul.kotlinfirst.fragment.CheckAgeFragment
 import `in`.khatri.rahul.kotlinfirst.fragment.RestaurantFragment
+import `in`.khatri.rahul.kotlinfirst.fragment.ZooFragment
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -26,8 +27,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         toggle!!.syncState()
 
-        if (savedInstanceState == null){
-            supportFragmentManager.beginTransaction().add(R.id.content_frame, CheckAgeFragment()).addToBackStack(null).commit()
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction().add(R.id.content_frame, CheckAgeFragment()).addToBackStack(null)
+                .commit()
         }
         navigation_view.setNavigationItemSelectedListener(this)
 
@@ -72,6 +74,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.zoo -> {
                 startActivity(Intent(this, ZooActivity::class.java))
+                supportFragmentManager.beginTransaction().replace(R.id.content_frame, ZooFragment()).commit()
 //                Toast.makeText(this,"Zoo Selected", Toast.LENGTH_SHORT).show()
             }
             R.id.food -> {
